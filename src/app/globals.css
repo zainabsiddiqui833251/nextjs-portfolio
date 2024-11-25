@@ -2,26 +2,233 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes typing {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
   }
+  
+  .animate-typing span {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 4s steps(20, end) infinite; /* Infinite loop of typing animation */
+  }
+  
+  @keyframes rotateCircle1 {
+    0% {
+      transform: rotate(0deg) translateX(50px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(50px) rotate(-360deg);
+    }
+  }
+  
+  @keyframes rotateCircle2 {
+    0% {
+      transform: rotate(0deg) translateX(70px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(70px) rotate(-360deg);
+    }
+  }
+  
+  @keyframes rotateCircle3 {
+    0% {
+      transform: rotate(0deg) translateX(90px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(90px) rotate(-360deg);
+    }
+  }
+  
+  /* Circles styling */
+  .circle {
+    position: absolute;
+    border: 2px solid #a0a0a0;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    opacity: 0.5;
+  }
+  
+  .animate-circle1 {
+    animation: rotateCircle1 5s linear infinite;
+    top: -10px;
+    left: -10px;
+  }
+  
+  .animate-circle2 {
+    animation: rotateCircle2 6s linear infinite;
+    top: -25px;
+    left: -25px;
+  }
+  
+  .animate-circle3 {
+    animation: rotateCircle3 7s linear infinite;
+    top: 25px;
+    left: 25px;
+  }
+  
+  .blotch {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes it circular */
+    background-color: #7DE2D1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Blotch 1 - Circular shape */
+  .blotch-1 {
+    top: 20%;
+    left: 10%;
+    background-color: #a0a0a0; /* Change color for variation */
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  /* Blotch 2 - Circular shape with smooth gradient */
+  .blotch-2 {
+    top: 40%;
+    left: 50%;
+    background: linear-gradient(135deg, #5d6063, #b0b2b8);
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* Blotch 3 - Circular shape with another variation */
+  .blotch-3 {
+    top: 70%;
+    left: 30%;
+    background-color: #a0a0a0;
+    animation: float 5s ease-in-out infinite;
+  }
+  /* Blotch 4 - New Circular blotch at top-right corner */
+.blotch-4 {
+  top: 10%;
+  right: 10%; /* Positioned in the top-right corner */
+  background-color: #a0a0a0; /* Different color */
+  animation: float 6s ease-in-out infinite;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  
+  /* Floating effect animation for smooth movement */
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
+
+@media (max-width: 700px) {
+ 
+
+  .blotch{
+    opacity: 0;
+  }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  /* Bubble Animation */
+  @keyframes floatBubbles {
+    0% {
+      transform: translate(0, 0) scale(0.8);
+      opacity: 0.4;
+    }
+    50% {
+      transform: translate(-10px, -30px) scale(1);
+      opacity: 0.6;
+    }
+    100% {
+      transform: translate(20px, 20px) scale(0.8);
+      opacity: 0.4;
+    }
   }
+
+  .bubble-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    pointer-events: none; /* To ensure it does not interact with other elements */
+  }
+
+  .bubble {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    animation: floatBubbles 10s infinite ease-in-out;
+    pointer-events: none;
+  }
+
+  /* Bubble Sizes and Positions */
+  .bubble-1 {
+    width: 150px;
+    height: 150px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .bubble-2 {
+    width: 120px;
+    height: 120px;
+    top: 50%;
+    left: 40%;
+    animation-delay: 2s;
+  }
+
+  .bubble-3 {
+    width: 100px;
+    height: 100px;
+    top: 80%;
+    left: 70%;
+    animation-delay: 4s;
+  }
+
+  .bubble-4 {
+    width: 200px;
+    height: 200px;
+    top: 30%;
+    left: 80%;
+    animation-delay: 6s;
+  }
+
+  .bubble-5 {
+    width: 130px;
+    height: 130px;
+    top: 60%;
+    left: 20%;
+    animation-delay: 8s;
+  }
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+@keyframes slideRight {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}
+.slider-left {
+  animation: slideLeft 10s linear infinite;
+}
+.slider-right {
+  animation: slideRight 10s linear infinite;
 }
