@@ -14,7 +14,7 @@ const About = () => {
                 </div>
 
                 <div className="w-[300px] space-y-3">
-                    <p><i className="bi bi-mortarboard mr-2"></i>Bachelor's in Physiology - University of Karachi (2024 - ongoing)</p>
+                    <p><i className="bi bi-mortarboard mr-2"></i>Bachelor&apos;s in Physiology - University of Karachi (2024 - ongoing)</p>
                     <p><i className="bi bi-code-square mr-2"></i>Cloud Applied Generative AI - Governor Initiative (2024 - ongoing)</p>
                     <p><i className="bi bi-patch-check-fill mr-2"></i>Frontend Development - TechForce Pakistan (2023-2024)</p>
                 </div>
