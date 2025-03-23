@@ -39,24 +39,26 @@ const Hero = () => {
                     <h3>frontend developer</h3>
                 </div>
                 <div className="buttons flex justify-center gap-5 items-center my-4">
-                    <button className="px-6 py-2 bg-gradient-to-r from-[#818588] to-[#5d6063] text-white rounded-lg border border-[#a0a0a0] shadow-md transition-transform transform hover:scale-105 hover:bg-gradient-to-r hover:from-[#b0b2b8] hover:to-[#818588] focus:outline-none">
-                        Resume
-                    </button>
+                    <Link href="/ZAINAB SIDDIQUI.pdf">
+                        <button className="px-6 py-2 bg-gradient-to-r from-[#818588] to-[#5d6063] text-white rounded-lg border border-[#a0a0a0] shadow-md transition-transform transform hover:scale-105 hover:bg-gradient-to-r hover:from-[#b0b2b8] hover:to-[#818588] focus:outline-none">
+                            Resume
+                        </button>
+                    </Link>
                     <Link href='/projects'>
-                    <button className="px-6 py-2 bg-gradient-to-r from-[#818588] to-[#5d6063] text-white rounded-lg border border-[#a0a0a0] shadow-md transition-transform transform hover:scale-105 hover:bg-gradient-to-r hover:from-[#b0b2b8] hover:to-[#818588] focus:outline-none">
-                        Projects
-                    </button>
+                        <button className="px-6 py-2 bg-gradient-to-r from-[#818588] to-[#5d6063] text-white rounded-lg border border-[#a0a0a0] shadow-md transition-transform transform hover:scale-105 hover:bg-gradient-to-r hover:from-[#b0b2b8] hover:to-[#818588] focus:outline-none">
+                            Projects
+                        </button>
                     </Link>
                 </div>
 
 
                 <div className="socials">
                     <ul className='flex justify-center rounded-b-xl gap-5 py-4 bg-[#a0a0a0]'>
-                        <li><i className=" bi bi-facebook hover:text-[#333333] text-[1.2em]"></i></li>
-                        <li><i className=" bi bi-whatsapp hover:text-[#333333] text-[1.2em]"></i></li>
-                        <li><i className=" bi bi-instagram hover:text-[#333333] text-[1.2em]"></i></li>
-                        <li><i className=" bi bi-twitter-x hover:text-[#333333] text-[1.2em]"></i></li>
-                        <li><i className=" bi bi-linkedin hover:text-[#333333] text-[1.2em]"></i></li>
+                        <Link href="https://www.facebook.com/profile.php?id=100068149400197"><li><i className="bi bi-facebook hover:text-[#333333] text-[1.2em]"></i></li></Link>
+                        <Link href="https://wa.me/03138659252"><li><i className="bi bi-whatsapp hover:text-[#333333] text-[1.2em]"></i></li></Link>
+                        <Link href="https://www.instagram.com/zainabsiddiqui534?igsh=OGlmZ2kxN3BsZGht"><li><i className="bi bi-instagram hover:text-[#333333] text-[1.2em]"></i></li></Link>
+                        <Link href="https://x.com/sidd94699?t=7F4nRv05KgvFdfHVYx9Klw&s=09"><li><i className="bi bi-twitter-x hover:text-[#333333] text-[1.2em]"></i></li></Link>
+                        <Link href="https://www.linkedin.com/in/zainab-siddiqui-822139283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><li><i className="bi bi-linkedin hover:text-[#333333] text-[1.2em]"></i></li></Link>
                     </ul>
                 </div>
             </div>

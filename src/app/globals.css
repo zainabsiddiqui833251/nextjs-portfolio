@@ -232,3 +232,28 @@
 .slider-right {
   animation: slideRight 10s linear infinite;
 }
+
+@media (max-width: 500px) {
+  .contact-form-container {
+    width: 95% !important;
+    padding: 1rem !important;
+  }
+
+  .contact-form-container h1 {
+    font-size: 2rem !important;
+  }
+
+  .contact-form-container p {
+    font-size: 1rem !important;
+  }
+
+  .contact-form-container input,
+  .contact-form-container textarea {
+    font-size: 0.9rem !important;
+    padding: 0.7rem !important;
+  }
+
+  .contact-form-container input[type="submit"] {
+    font-size: 1rem !important;
+  }
+}
